@@ -1,0 +1,173 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f0f4ff, #e2e8f0);
+    color: #333;
+    min-height: 100vh;
+  }
+  
+  /* Navbar */
+  header {
+    background: #0a0a0a;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+  .navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10%;
+  }
+  .logo {
+    width: 70px;
+  }
+  .navbar-links {
+    list-style: none;
+    display: flex;
+  }
+  .navbar-links li {
+    margin-left: 30px;
+  }
+  .navbar-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+  }
+  .navbar-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .navbar-links a.active {
+    background: #6a4c9c;
+    font-weight: bold;
+    border-radius: 0;
+  }
+  
+  /* Main Content Layout */
+  .main-content {
+    padding-top: 100px; /* Clear the fixed header */
+    width: 100%;
+  }
+  .access-wrapper {
+    display: flex;
+    align-items: flex-start; /* Ensure all columns align at the top */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Left Column: Accounts */
+  .accounts-column {
+    flex: 1;
+    min-width: 250px;
+  }
+  .accounts-column h2 {
+    font-size: 1.8rem;
+    color: #4e3b73;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .account-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  .account-card:hover {
+    transform: translateY(-5px);
+  }
+  .account-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #6a4c9c;
+  }
+  .account-balance {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .view-trans-btn {
+    background: #6a4c9c;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .view-trans-btn:hover {
+    background: #4e3b73;
+  }
+  
+  /* Middle Column: Transactions List */
+  .transactions-column {
+    flex: 2;
+  }
+  .transactions-column h2 {
+    font-size: 1.8rem;
+    color: #4e3b73;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .transactions-list {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    /* Removed max-height and overflow-y for full expansion */
+  }
+  .transactions-list ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .transactions-list li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+  
+  /* Right Column: Spending Chart */
+  .chart-column {
+    flex: 2;
+    text-align: center;
+    align-self: flex-start; /* Align the chart column at the top */
+  }
+  .chart-column h2 {
+    font-size: 1.8rem;
+    color: #4e3b73;
+    margin-bottom: 10px;
+  }
+  .chart-column canvas {
+    max-width: 400px;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto;
+  }
+  
+  /* Footer */
+  footer {
+    width: 100vw;
+    background: #080808;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+    left: 0;
+  }
+  

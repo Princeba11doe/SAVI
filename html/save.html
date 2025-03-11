@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAVE - SAVI Dashboard</title>
+  <link rel="stylesheet" href="/css/save.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <img src="/images/SAVI logo 2.png" alt="SAVI Logo" class="logo" />
+        <ul class="navbar-links">
+          <li><a href="save.html" class="active">SAVE</a></li>
+          <li><a href="access.html">ACCESS</a></li>
+          <li><a href="value.html">VALUE</a></li>
+          <li><a href="invest.html">INVEST</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="save-section">
+      <!-- Budgeting Goal with Editable Value -->
+      <div class="goal-header">
+        <h1>Savings Goal: <span id="goalAmount">$10,000.00</span></h1>
+        <button id="editGoalBtn" class="edit-goal-btn">Edit Goal</button>
+      </div>
+
+      <!-- Doughnut Chart with Balance in Center -->
+      <div class="chart-container">
+        <canvas id="savingsChart"></canvas>
+        <div class="chart-center-text">
+          <p>$5,230.50</p>
+        </div>
+      </div>
+
+      <!-- Progress Text -->
+      <div class="progress-text">
+        <p id="progressMessage"></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SAVI Budgeting App | All rights reserved</p>
+  </footer>
+
+  <!-- Include Chart.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Custom JavaScript for Chart and Edit Goal functionality -->
+  <script src="/javascript/save.js"></script>
+</body>
+</html>

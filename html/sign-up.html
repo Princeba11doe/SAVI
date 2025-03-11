@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savi - Sign Up</title>
+    <link rel="stylesheet" href="/css/sign-up.css">
+
+
+    <style>
+        h1{
+            color: purple;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <section class="signup-container">
+        <div class="signup-left">
+            <img src="budgeting-app-image.jpg" alt="Budgeting App" class="signup-image">
+        </div>
+        <div class="signup-right">
+            <div class="signup-box">
+                <h1>Welcome to SAVI</h1>
+                <!-- <p>Sign up and start managing your finances smarter.</p> -->
+                <form class="signup-form">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" placeholder="First Name*" required>
+                    
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" placeholder="Last Name*" required>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email*" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    title="Enter a valid email">
+                    
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Create password*" required pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,20}"
+                    title="Password must be 8-20 characters long, include at least one letter and one number">
+                    
+                    <button type="submit" class="signup-button">Sign Up</button>
+                </form>
+                <p class="login-link">Already have an account? <a href="login.html">Log in</a></p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 SAVI. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

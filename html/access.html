@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACCESS - SAVI Dashboard</title>
+  <link rel="stylesheet" href="/css/access.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <img src="/images/SAVI logo 2.png" alt="SAVI Logo" class="logo" />
+        <ul class="navbar-links">
+          <li><a href="save.html">SAVE</a></li>
+          <li><a href="access.html" class="active">ACCESS</a></li>
+          <li><a href="value.html">VALUE</a></li>
+          <li><a href="invest.html">INVEST</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content: Three-Column Layout -->
+  <main class="main-content">
+    <div class="access-wrapper">
+      <!-- Left Column: Account Cards -->
+      <div class="accounts-column">
+        <h2>Your Accounts</h2>
+        <!-- Checking Account Card -->
+        <div class="account-card" onclick="showTransactions('checking')">
+          <h3>Checking Account</h3>
+          <p class="account-balance">$3,200.00</p>
+          <button class="view-trans-btn">View Transactions</button>
+        </div>
+        <!-- Savings Account Card -->
+        <div class="account-card" onclick="showTransactions('savings')">
+          <h3>Savings Account</h3>
+          <p class="account-balance">$2,030.00</p>
+          <button class="view-trans-btn">View Transactions</button>
+        </div>
+        <!-- Credit Card Account Card -->
+        <div class="account-card" onclick="showTransactions('credit')">
+          <h3>Credit Card</h3>
+          <p class="account-balance">-$150.00</p>
+          <button class="view-trans-btn">View Transactions</button>
+        </div>
+      </div>
+      
+      <!-- Middle Column: Transactions List -->
+      <div class="transactions-column">
+        <h2>Transactions</h2>
+        <div id="transactionsList" class="transactions-list">
+          <p>Select an account to view transactions.</p>
+        </div>
+      </div>
+      
+      <!-- Right Column: Spending Chart -->
+      <div class="chart-column">
+        <h2>Spending Habits</h2>
+        <canvas id="spendingChart"></canvas>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SAVI Budgeting App | All rights reserved</p>
+  </footer>
+
+  <!-- Include Chart.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Custom JavaScript for Access Page -->
+  <script src="/javascript/access.js"></script>
+</body>
+</html>
